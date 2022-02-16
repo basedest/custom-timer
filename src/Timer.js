@@ -1,9 +1,9 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { useContext, useState, useEffect, useRef} from 'react';
 import 'react-circular-progressbar/dist/styles.css';
 import PauseButton from './PauseButton';
 import PlayButton from './PlayButton';
 import SettingsButton from './SettingsButton';
-import { useContext, useState, useEffect, useRef} from 'react';
 import SettingContext from './SettingsContext';
 import workSound from "./sounds/work-sound.mp3";
 import breakSound from "./sounds/break-sound.mp3";
@@ -68,7 +68,7 @@ function Timer() {
     }, [settingsInfo]);
 
     const totalSeconds = mode === 'work' ? settingsInfo.workSeconds : settingsInfo.breakSeconds;
-    const percentage = Math.round(secondsLeft / totalSeconds*100);
+    const percentage = secondsLeft / totalSeconds*100;
 
     return (
         <div>
