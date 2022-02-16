@@ -5,13 +5,25 @@ import PauseButton from './PauseButton';
 import PlayButton from './PlayButton';
 import SettingsButton from './SettingsButton';
 import SettingContext from './SettingsContext';
-import workSound from "./sounds/work-sound.mp3";
-import breakSound from "./sounds/break-sound.mp3";
+import workSoundSrc from "./sounds/work-sound.mp3";
+import breakSoundSrc from "./sounds/break-sound.mp3";
 import UIFx from 'uifx';
 
 const red = '#f54e4e';
 const green = '#4aec8c';
 
+const workSound = new UIFx(
+    workSoundSrc,
+    {
+        volume: 1.0
+    }
+);
+const breakSound = new UIFx(
+    breakSoundSrc,
+    {
+        volume: 1.0
+    }
+);
 
 function Timer() {
     const settingsInfo = useContext(SettingContext);
@@ -40,14 +52,7 @@ function Timer() {
             setSecondsLeft(nextSeconds);
             secondsLeftRef.current = nextSeconds;
 
-            const soundSrc = nextMode === "work" ? workSound : breakSound;
-            const sound = new UIFx(
-                soundSrc,
-                {
-                    volume: 1.0
-                }
-            )
-            sound.play();
+            nextMode === "work" ? workSound.play() : breakSound.play();
         }
 
         secondsLeftRef.current = settingsInfo.workSeconds;
