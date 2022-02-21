@@ -1,9 +1,8 @@
 # React (Electron) timer 
 
----
-
 ## Available Scripts
 
+---
 
 ## Starting Electron app
 
