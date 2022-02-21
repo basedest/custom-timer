@@ -2,6 +2,9 @@
 
 ---
 
+## Available Scripts
+
+
 ## Starting Electron app
 
 ### `yarn electron:serve`
@@ -9,10 +12,6 @@
 ## Building Electron app
 
 ### `yarn electron:build`
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
