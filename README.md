@@ -1,5 +1,10 @@
 # React (Electron) timer 
 
+Timer app similar to pomodoro-timer.
+    
+It has work and break cycles, with the start of each cycle unique sound start playing.
+Written with React and Electron so you can build it as native app for any desktop platform.
+
 ## Available Scripts
 
 ---
