@@ -7,8 +7,6 @@ Written with React and Electron so you can build it as native app for any deskto
 
 ## Available Scripts
 
----
-
 ## Starting Electron app
 
 ### `yarn electron:serve`
@@ -16,6 +14,8 @@ Written with React and Electron so you can build it as native app for any deskto
 ## Building Electron app
 
 ### `yarn electron:build`
+
+---
 
 In the project directory, you can run:
 
